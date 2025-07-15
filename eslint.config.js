@@ -20,4 +20,12 @@ export default tseslint.config([
       globals: globals.browser,
     },
   },
+  {
+    ignores: ['**/node_modules/', 'dist/', 'build/', '*.d.ts', '!.storybook/'],
+  },
+  {
+    rules: {
+      'no-console': 'error',
+    },
+  },
 ]);
