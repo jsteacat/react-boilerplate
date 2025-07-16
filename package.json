@@ -1,7 +1,7 @@
 {
   "name": "react-boilerplate",
   "private": true,
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,9 @@
     "preview": "vite preview",
     "prepare": "husky",
     "format": "prettier --write .",
-    "format:check": "prettier --check ."
+    "format:check": "prettier --check .",
+    "lint:css": "stylelint \"**/*.{css,scss}\"",
+    "lint:css:fix": "stylelint \"**/*.{css,scss}\" --fix"
   },
   "dependencies": {
     "react": "^19.1.0",
@@ -32,6 +34,13 @@
     "husky": "^9.1.7",
     "lint-staged": "^16.1.2",
     "prettier": "^3.6.2",
+    "stylelint": "^16.21.1",
+    "stylelint-config-standard": "^38.0.0",
+    "stylelint-config-standard-scss": "^15.0.1",
+    "stylelint-declaration-block-no-ignored-properties": "^2.8.0",
+    "stylelint-high-performance-animation": "^1.11.0",
+    "stylelint-order": "^7.0.0",
+    "stylelint-prettier": "^5.0.3",
     "typescript": "~5.8.3",
     "typescript-eslint": "^8.35.1",
     "vite": "^7.0.4"
@@ -42,8 +51,9 @@
       "eslint --fix --max-warnings 0 --no-cache",
       "bash -c 'tsc --noEmit --skipLibCheck -p tsconfig.json'"
     ],
-    "*.{css,scss,json,md}": [
-      "prettier --write"
+    "*.{css,scss}": [
+      "prettier --write",
+      "stylelint --fix"
     ]
   }
 }
