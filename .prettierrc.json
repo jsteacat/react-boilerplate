@@ -7,5 +7,14 @@
   "jsxSingleQuote": true,
   "arrowParens": "avoid",
   "bracketSpacing": true,
-  "endOfLine": "auto"
+  "endOfLine": "auto",
+  "jsxBracketSameLine": false,
+  "overrides": [
+    {
+      "files": "*.ts",
+      "options": {
+        "semi": true
+      }
+    }
+  ]
 }
